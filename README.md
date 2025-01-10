@@ -1,4 +1,4 @@
-# Supermarket Stock Management System
+# Supermarket Stock Management System.
 
 ## Project Overview
 This project is a stock management system for a supermarket, built with Node.js, Express, and Sequelize ORM.
