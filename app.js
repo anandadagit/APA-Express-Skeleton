@@ -21,3 +21,5 @@ db.sequelize.sync().then(() => {
   console.error('Unable to synchronize the database:', error);
 });
 
+
+module.exports = app;
