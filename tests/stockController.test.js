@@ -58,6 +58,7 @@ describe('Stock Controller', () => {
 
       await request(app)
         .post('/create')
+        .type('form')
         .send(newProduct)
         .expect(302); // Expecting a redirect status code
 
