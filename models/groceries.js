@@ -6,13 +6,23 @@
 
 module.exports = (sequelize, DataTypes) => {
     const Groceries = sequelize.define('Groceries', {
-      // TODO: Define fields here
+      expirationDate: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      nutritionalInfo: {
+        type: DataTypes.STRING,
+        allowNull: false,        
+      },
+      organic: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultBalue: false,
+      }
     });
   
     Groceries.associate = (models) => {
-      // TODO: Define associations here
-      // Groceries.belongsTo(models.Product);
-    };
+     Groceries.belongsTo(models.Product)};
   
     return Groceries;
   };

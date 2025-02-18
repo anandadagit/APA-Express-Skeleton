@@ -14,6 +14,9 @@ db.Sequelize = Sequelize;
 db.Product = require('./product.js')(sequelize, DataTypes);
 db.Clothing = require('./clothing.js')(sequelize, DataTypes);
 db.Electronics = require('./electronics.js')(sequelize, DataTypes);
+db.Books = require('./books.js')(sequelize, DataTypes);
+db.Groceries = require('./groceries.js')(sequelize, DataTypes);
+db.Toys = require('./toys.js')(sequelize, DataTypes);
 
 // Set up associations
 Object.keys(db).forEach(modelName => {

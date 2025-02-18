@@ -6,14 +6,23 @@
 
 module.exports = (sequelize, DataTypes) => {
     const Toys = sequelize.define('Toys', {
-      // TODO: Define fields here
+      ageGroup: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      material: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      batteryOperated: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+      }
     });
   
     Toys.associate = (models) => {
-      // TODO: Define associations here
-      // Toys.belongsTo(models.Product);
-    };
-  
+      Toys.belongsTo(models.Product)};    
+
     return Toys;
   };
   

@@ -25,6 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     Product.associate = (models) => {
       Product.hasOne(models.Clothing);
       Product.hasOne(models.Electronics);
+      Product.hasOne(models.Books);
+      Product.hasOne(models.Groceries);
+      Product.hasOne(models.Toys);
     };
   
     return Product;
